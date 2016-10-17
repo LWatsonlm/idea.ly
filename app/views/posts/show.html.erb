@@ -1,0 +1,13 @@
+<h1>Title: <%= @post.title %></h1>
+<%=link_to 'edit post', edit_post_path(@post), class:"nav-link" %> | <%= link_to 'delete post', post_path, method: :delete, class:"nav-link" %>
+<p>
+  Text: <%= @post.body %> </p>
+<%= @post.created_at %>
+<%= link_to 'home', posts_path %>
+
+<div class= "comments">
+  <h2>Comments:</h2>
+  <p class="comment_title"><%= @comment.title %></p>
+  <p class="comment_body"><%= @comment.body %></p>
+  <p><%= link_to 'add new comment', new_post_comment_path(@post), class: "nav-link" %></p>
+</div>
