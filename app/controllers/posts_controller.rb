@@ -10,7 +10,6 @@ end
 
 def show
   @post = Post.find params[:id]
-  @comment = Comment.find params[:id]
 end
 
 def edit

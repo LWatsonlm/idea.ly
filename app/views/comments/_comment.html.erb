@@ -1,5 +1,0 @@
-<div class= "comments">
-<p id= "comments_title"><strong>Title: </strong><%= comment.title %></p>
-<p id="comment_body"><strong>Body: </strong><%= comment.body %></p>
-</div>
-<%= link_to 'delete comment', post_comment_path(@post, comment), method: :delete, data: { confirm: "Are you sure?" } %>
