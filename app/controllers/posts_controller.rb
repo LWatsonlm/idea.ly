@@ -17,13 +17,8 @@ def edit
 end
 
 def create
-  @post = Post.new(post_params)
-
-  if @post.save
-    redirect_to @post
-  else
-    render 'new'
-  end
+  @post = Post.create!(post_params.merge(user: current_user))
+  redirect_to post_path(@post)
 end
 
 def update
@@ -38,8 +33,11 @@ end
 
 def destroy
   @post = Post.find params[:id]
-  @post.destroy
-
+  if @post.user == current_user
+      @post.destroy
+  else
+    flash[:alert] = "Only the author of the post can delete."
+  end
   redirect_to posts_path
 end
 
