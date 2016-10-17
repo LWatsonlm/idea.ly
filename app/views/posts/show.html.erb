@@ -1,30 +1,34 @@
-<h1>Title: <%= @post.title %></h1>
-<%=link_to 'edit post', edit_post_path(@post), class:"nav-link" %> | <%= link_to 'delete post', post_path, method: :delete, class:"nav-link" %>
+<h1>
+  Title: <%= @post.title %>
+</h1>
+
+<%= link_to 'edit post', edit_post_path(@post), class:"nav-link" %> |
+<%= link_to 'delete post', post_path, method: :delete, class:"nav-link" %>
+
 <p>
-  Text: <%= @post.body %> </p>
-<%= @post.created_at %>
+  Text: <%= @post.body %>
+  Created at: <%= @post.created_at %>
+</p>
 
+<h2>
+  Comments:
+</h2>
 <div class= "comments">
-<% @post.comments.each do |comment| %>
-  <h2>Comments:</h2>
-  <%= comment.title %>
-  <%= comment.body %>
-<% end %>
-
-<h2>Add a Comment:</h2>
-<%= form_for([@post, @post.comments.build]) do |f| %>
-  <p>
-  <%= f.label :title %><br />
-  <%= f.text_field :title %><br />
+  <% @post.comments.each do |comment| %>
+  <p id= "comments_title">
+    <strong>Title: </strong><%= comment.title %>
   </p>
-  <p>
-  <%= f.label :body %><br />
-  <%= f.text_field :body %>
+  <p id="comment_body">
+    <strong>Body: </strong><%= comment.body %>
   </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+  <%= link_to 'delete comment', post_comment_path(@post, comment), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
 </div>
+
+
+<h2>
+  Add a Comment:
+</h2>
+<%= render 'comments/form' %>
 
 <%= link_to 'back to ideas', posts_path, class: "nav-link" %>
