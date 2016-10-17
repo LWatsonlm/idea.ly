@@ -24,11 +24,12 @@ end
 def update
   @post = Post.find params[:id]
 
-  if @post.update(post_params)
-    redirect_to @post
+  if @post.user == current_user
+    @post.update
   else
-    render 'edit'
+    flash[:alert] = "Only the author of the post can edit this post."
   end
+  redirect_to @post
 end
 
 def destroy
