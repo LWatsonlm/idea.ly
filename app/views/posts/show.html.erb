@@ -3,11 +3,28 @@
 <p>
   Text: <%= @post.body %> </p>
 <%= @post.created_at %>
-<%= link_to 'home', posts_path %>
 
 <div class= "comments">
+<% @post.comments.each do |comment| %>
   <h2>Comments:</h2>
-  <p class="comment_title"><%= @comment.title %></p>
-  <p class="comment_body"><%= @comment.body %></p>
-  <p><%= link_to 'add new comment', new_post_comment_path(@post), class: "nav-link" %></p>
+  <%= comment.title %>
+  <%= comment.body %>
+<% end %>
+
+<h2>Add a Comment:</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %><br />
+  </p>
+  <p>
+  <%= f.label :body %><br />
+  <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 </div>
+
+<%= link_to 'back to ideas', posts_path, class: "nav-link" %>
