@@ -17,11 +17,11 @@
 <h2><%= f.label :title %></h2>
   <%= f.text_field :title, size:"42x12" %>
 
-<%= radio_button_tag(:topic, "Question") %>
+<%= f.radio_button(:topic, "Question") %>
 <%= label_tag(:topic, "Question") %>
-<%= radio_button_tag(:topic, "Idea") %>
+<%= f.radio_button(:topic, "Idea") %>
 <%= label_tag(:topic, "Idea") %>
-<%= radio_button_tag(:topic, "Random Thought") %>
+<%= f.radio_button(:topic, "Random Thought") %>
 <%= label_tag(:topic, "Random Thought") %>
 
 <h2><%= f.label :body %></h2>
