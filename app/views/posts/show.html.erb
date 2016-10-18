@@ -2,8 +2,10 @@
   Title: <%= @post.title %>
 </h1>
 
-<%= link_to 'edit post', edit_post_path(@post), class:"nav-link" %> |
-<%= link_to 'delete post', post_path, method: :delete, data: { confirm: "Are you sure?" }, class:"nav-link" %>
+<% if @post.user == current_user %>
+    <%= link_to 'edit post', edit_post_path(@post), class:"nav-link" %> |
+    <%= link_to 'delete post', post_path, method: :delete, class:"nav-link" %>
+<% end %>
 
 <p>
   Text: <%= @post.body %>
@@ -21,7 +23,7 @@
   <p id="comment_body">
     <strong>Body: </strong><%= comment.body %>
   </p>
-  <%= link_to 'delete comment', post_comment_path(@post, comment), method: :delete, data: { confirm: "Are you sure?" }, class:"nav-link" %>
+  <%= link_to 'delete comment', post_comment_path(@post, comment), method: :delete, class:"nav-link" %>
   <% end %>
 </div>
 
