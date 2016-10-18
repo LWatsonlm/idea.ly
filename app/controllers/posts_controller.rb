@@ -54,6 +54,10 @@ def downvote
   redirect_to :back
 end
 
+def score
+  self.get_upvotes.size - self.get_downvotes.size
+end
+
 private
   def post_params
     params.require(:post).permit(:title, :body)
