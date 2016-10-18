@@ -1,3 +1,4 @@
+<div class= "post-view">
 <% @posts.each do |post| %>
   <h2>
     <%= link_to post.title, post_path(post) %>
@@ -11,6 +12,7 @@
     Submitted <%= time_ago_in_words(post.created_at) %>
     by <%= post.user.email %>
   </h4>
+</div>
 
 <div class = "voting">
   <%= button_to like_post_path(post), method: :put do %>
