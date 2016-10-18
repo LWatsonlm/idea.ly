@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'acts_as_votable', '~> 0.10.0'
+# to upvote and downvote! 
 gem 'devise'
 # adding devise
 gem 'rb-readline'
