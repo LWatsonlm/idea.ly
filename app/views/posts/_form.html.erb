@@ -16,6 +16,14 @@
 
 <h2><%= f.label :title %></h2>
   <%= f.text_field :title, size:"42x12" %>
+
+<%= f.radio_button(:topic, "Question") %>
+<%= label_tag(:topic, "Question") %>
+<%= f.radio_button(:topic, "Idea") %>
+<%= label_tag(:topic, "Idea") %>
+<%= f.radio_button(:topic, "Random Thought") %>
+<%= label_tag(:topic, "Random Thought") %>
+
 <h2><%= f.label :body %></h2>
   <%= f.text_area :body, size:"60x12" %>
   <%= f.submit %>

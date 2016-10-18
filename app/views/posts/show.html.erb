@@ -10,11 +10,14 @@
 <p>
   Text: <%= @post.body %>
   Created at: <%= @post.created_at %>
+  Topic: <%= @post.topic %>
 </p>
 
 <h2>
   Comments:
 </h2>
+
+
 <div class= "comments">
   <% @post.comments.each do |comment| %>
   <p id= "comments_title">
