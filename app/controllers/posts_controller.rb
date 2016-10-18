@@ -25,7 +25,7 @@ def update
   @post = Post.find params[:id]
 
   if @post.user == current_user
-    @post.update
+    @post.update(post_params)
   else
     flash[:alert] = "Only the author of the post can edit this post."
   end
