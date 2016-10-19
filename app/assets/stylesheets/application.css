@@ -42,3 +42,7 @@ a:hover {
 .post-view {
   border: blue solid;
 }
+
+.nav-link {
+  border: green dashed;
+}

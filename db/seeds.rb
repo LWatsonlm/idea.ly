@@ -14,7 +14,7 @@ eric = User.create!(email: "eric@gmail.com", password: "123456")
 
 writer = Post.create!(title: "Thinking about becoming a writer", topic: "Idea", user: eric, body: "What type of fanfic do you like? Would you read my Ed, Edd, n Eddy fanfic?")
 food = Post.create!(title: "What's your favorite food fusion?", topic: "Question", user: latoya, body: "Me and my buddies are thinking of opening a restaurant. Thinking of possible types of restaurants. What Mexican and Asian? Indian and American? or something completeley different like sushi burritos?")
-biking = Post.create!(title: "Bikers!! What would be helpful to you?", topic: "Queston", user: latoya, body: "Calling all D.C. bicyclists! I'm in the middle of customer discovery for my new product. As a city commuter, what would be helpful for you?")
+biking = Post.create!(title: "Bikers!! What would be helpful to you?", topic: "Question", user: latoya, body: "Calling all D.C. bicyclists! I'm in the middle of customer discovery for my new product. As a city commuter, what would be helpful for you?")
 career = Post.create!(title: "Should I become a front end developer, or a back end developer?", user: eric, topic: "Question", body: "Thinking about switching careers but having a hard time. Can anyone give me feedback on either career path?")
 random = Post.create!(title: "OMG, you guys!", topic: "Random Thought", user: latoya, body: "Wrong is spelled wrong in the dictionary! #MindBlown!")
 

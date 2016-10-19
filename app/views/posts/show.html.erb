@@ -2,21 +2,26 @@
   Title: <%= @post.title %>
 </h1>
 
-<% if @post.user == current_user %>
-    <%= link_to 'Edit Post', edit_post_path(@post), class:"nav-link" %> |
-    <%= link_to 'Delete Post', post_path, method: :delete, class:"nav-link" %>
-<% end %>
-
-<p>
-  Text: <%= @post.body %>
-  Created at: <%= @post.created_at %>
+<h2 clas= "topic">
   Topic: <%= @post.topic %>
-</p>
-
-<h2>
-  Comments:
+  <% if @post.topic == "Question" %>
+    <%= image_tag "/assets/question-mark.png" %>
+  <% elsif @post.topic == "Idea" %>
+    <%= image_tag "/assets/light-bulb-logo.png" %>
+  <% elsif @post.topic == "Random Thought" %>
+    <%= image_tag "/assets/thought-bubble.png" %>
+  <% else %>
+  <% end %>
 </h2>
 
+<% if @post.user == current_user %>
+    <%= link_to 'Edit Post', edit_post_path(@post), class: "nav-link" %> |
+    <%= link_to 'Delete Post', post_path, method: :delete, class: "nav-link" %>
+<% end %>
+
+<p>Text: <%= @post.body %></p>
+
+<h2>Comments:</h2>
 
 <div class= "comments">
   <% @post.comments.each do |comment| %>
