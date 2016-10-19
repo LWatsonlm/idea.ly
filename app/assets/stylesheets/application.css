@@ -43,7 +43,7 @@ form {
   width: 38%;
   padding: 10px;
   display: inline-block;
-  text-align: center;
+  background-color: #FCFCFC;
 }
 
 .devise, .devise-links, #new_user {
@@ -81,16 +81,9 @@ post-body {
 
 }
 
-
-
-
-.voting {
-  border: red dashed;
-}
-
 .post-view {
   border: blue solid;
-  display: block;
+  margin: 2% 10% 2% 10%;
 }
 
 .nav-link {

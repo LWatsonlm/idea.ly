@@ -12,6 +12,8 @@
 
   <p class="post-body"><%= @post.body %></p>
 
+  <%= render partial: "voting", locals: { post: @post } %>
+
   <h2>Existing Comments:</h2>
   <%= render 'comment' %>
 
