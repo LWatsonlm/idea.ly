@@ -1,25 +1,36 @@
-<div class= "post-view">
+<table class= "post-view">
+
 <% @posts.each do |post| %>
-  <%= link_to post.title, post_path(post) %>
-  <%= post.topic %>
 
+<tr>
+  <th><%= link_to post.title, post_path(post) %></th>
+</tr>
+
+<tr>
+  <td>
   <%= render partial: "topic", locals: {post: post} %>
+  </td>
+</tr>
 
-Submitted: <%= time_ago_in_words(post.created_at) %> by <%= post.user.email %>
-</div>
+<tr>
+  <td>Submitted: <%= time_ago_in_words(post.created_at) %> by <%= post.user.email %></td>
+</tr>
 
-  <div class="voting">
-<p>
-  <%= link_to like_post_path(post), method: :put do %>
+<div class="voting">
+<tr>
+<td>
+ <%= link_to like_post_path(post), method: :put do %>
     <%= "Upvotes: #{post.get_upvotes.size} 👍 " %>
   <% end %>
-</p>
+</td>
 
-<p>
+<td>
   <%= link_to dislike_post_path(post), method: :put do %>
     <%= "Downvotes: #{post.get_downvotes.size} 👎 "  %>
   <% end %>
-</p>
-
+</td>
+</tr>
 </div>
+
 <% end %>
+</table>

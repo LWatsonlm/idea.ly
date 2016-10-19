@@ -1,5 +1,5 @@
-<h2 class= "topic">
-  Topic: <%= post.topic %>
+<div class= "topic">
+  <%= post.topic %> <br />
   <% if post.topic == "Question" %>
       <%= image_tag "/assets/question.png" %>
     <% elsif post.topic == "Idea" %>
@@ -8,4 +8,4 @@
       <%= image_tag "/assets/thought-bubble.png" %>
     <% else %>
   <% end %>
-</h2>
+</div>
