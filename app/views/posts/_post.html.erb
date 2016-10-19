@@ -1,20 +1,14 @@
 <div class= "post-view">
 <% @posts.each do |post| %>
-  <h2>
-    <%= link_to post.title, post_path(post) %>
-  </h2>
+  <%= link_to post.title, post_path(post) %>
+  <%= post.topic %>
 
-  <p>
-    <%= post.body %>
-  </p>
+  <%= render partial: "topic", locals: {post: post} %>
+
+Submitted: <%= time_ago_in_words(post.created_at) %> by <%= post.user.email %>
 </div>
 
-<div class="voting">
-  <h4>
-    Submitted <%= time_ago_in_words(post.created_at) %>
-    by <%= post.user.email %>
-  </h4>
-
+  <div class="voting">
 <p>
   <%= link_to like_post_path(post), method: :put do %>
     <%= "Upvotes: #{post.get_upvotes.size} 👍 " %>

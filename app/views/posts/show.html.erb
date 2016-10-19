@@ -2,17 +2,7 @@
   Title: <%= @post.title %>
 </h1>
 
-<h2 clas= "topic">
-  Topic: <%= @post.topic %>
-  <% if @post.topic == "Question" %>
-    <%= image_tag "/assets/question-mark2.png" %>
-  <% elsif @post.topic == "Idea" %>
-    <%= image_tag "/assets/Light-Bulb-logo.png" %>
-  <% elsif @post.topic == "Random Thought" %>
-    <%= image_tag "/assets/thought-bubble.png" %>
-  <% else %>
-  <% end %>
-</h2>
+<%= render partial: "topic", locals: {post: @post} %>
 
 <% if @post.user == current_user %>
     <%= link_to 'Edit Post', edit_post_path(@post), class: "nav-link" %> |
@@ -24,20 +14,13 @@
 <h2>Comments:</h2>
 
 <div class= "comments">
-  <% @post.comments.each do |comment| %>
-
-  <p id= "comments_title">
-    <strong>Title: </strong><%= comment.title %>
-  </p>
-
-  <p id="comment_body">
-    <strong>Body: </strong><%= comment.body %>
-  </p>
-
+<% @post.comments.each do |comment| %>
+  <p id= "comments_title"><strong>Title: </strong><%= comment.title %></p>
+  <p id="comment_body"><strong>Body: </strong><%= comment.body %></p>
   <%= link_to 'delete comment', post_comment_path(@post, comment), method: :delete, class:"nav-link" %>
-
-  <% end %>
+<% end %>
 </div>
+
 
 <h2>
   Add a Comment:

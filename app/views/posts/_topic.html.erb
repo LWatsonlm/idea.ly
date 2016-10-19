@@ -1,0 +1,11 @@
+<h2 class= "topic">
+  Topic: <%= post.topic %>
+  <% if post.topic == "Question" %>
+      <%= image_tag "/assets/question.png" %>
+    <% elsif post.topic == "Idea" %>
+      <%= image_tag "/assets/Light-Bulb-logo.png" %>
+    <% elsif post.topic == "Random Thought" %>
+      <%= image_tag "/assets/thought-bubble.png" %>
+    <% else %>
+  <% end %>
+</h2>
