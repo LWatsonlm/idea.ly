@@ -7,20 +7,21 @@
   <p>
     <%= post.body %>
   </p>
+</div>
+
+<div class="voting">
 
   <h4>
     Submitted <%= time_ago_in_words(post.created_at) %>
     by <%= post.user.email %>
   </h4>
-</div>
 
-<div class = "voting">
-  <%= button_to like_post_path(post), method: :put do %>
+  <%= link_to like_post_path(post), method: :put do %>
     <%= "Upvotes: #{post.get_upvotes.size}" %>
   <% end %>
 
-  <%= button_to dislike_post_path(post), method: :put do %>
+  <%= link_to dislike_post_path(post), method: :put do %>
     <%= "Downvotes: #{post.get_downvotes.size}" %>
   <% end %>
-<% end %>
 </div>
+<% end %>
