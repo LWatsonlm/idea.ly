@@ -14,21 +14,57 @@
  *= require_self
  */
 nav {
+  padding: 1%;
+  border-bottom: 1px solid #888;
   background-color: red;
+}
+
+nav a {
   padding: 1%;
 }
 
-a {
+a, h1, h2, h3, p {
     text-decoration: none;
+    font-family: 'Roboto Slab', serif;
 }
 
-.welcome a:link {
-  color: #6F6E7C;
+
+/*need to style forms and image sizes*/
+
+form {
+  border: 2px solid #c6c7cc;
+  border-radius: 10px;
+  font: 15px/1.4 "Roboto Slab", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 38%;
+  padding: 10px;
 }
 
-.welcome a:visited {
-  color: #000000;
+.field {
+  border: 0;
+  margin: 5px;
+  padding: 5px;
 }
+
+#post_body {
+  font: 15px/1.4 "Roboto Slab", Helvetica, Arial, sans-serif;
+}
+
+.actions {
+  text-align:center;
+}
+
+input {
+  border-radius: 5px;
+  font: 15px/1.4 "Roboto Slab", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 20%;
+  height: auto;
+}
+
 
 a:hover {
     text-decoration: underline;

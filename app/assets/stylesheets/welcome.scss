@@ -27,15 +27,23 @@
 .welcome-middle {
   font-family: 'Chewy', cursive;
   font-size: 50px;
-  width: 50%;
-  text-align: center;
   margin: 0;
+  text-align: center;
+  width: 50%;
 }
 
 .welcome-bottom {
+  border: solid;
   font-family: 'Chewy', cursive;
   font-size: 30px;
   margin: 10;
-  border: solid;
-  padding: 1%;
+  padding: .5%;
+}
+
+.welcome a:visited {
+  color: #000000;
+}
+
+.welcome a:link {
+  color: #6f6e7c;
 }

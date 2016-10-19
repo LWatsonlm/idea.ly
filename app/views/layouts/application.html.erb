@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>idea.ly</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Chewy|Oleo+Script" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Chewy|Oleo+Script|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/animate.css" />
     <script src="javascripts/wow.js"></script>
       <script>
         new WOW().init();
       </script>
 
-  </head>
+</head>
 
-  <body>
-<nav>
+<body>
+  <nav>
   <% if !current_user %>
-      <%= link_to "Sign up", new_user_registration_path %>
-      <%= link_to "Sign In", new_user_session_path %>
+        <%= link_to "Sign up", new_user_registration_path %>
+        <%= link_to "Sign In", new_user_session_path %>
   <% else %>
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-      <%= link_to "Add Your Idea", new_post_path %>
-      <p>
-        <%= "Logged in as: #{current_user.email}" %>
-      </p>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <%= link_to "Add Your Idea", new_post_path %>
+        <p><%= "Logged in as: #{current_user.email}" %></p>
   <% end %>
-</nav>
     <p class="notice">
       <%= notice %>
     </p>
     <p class="alert">
       <%= alert %>
     </p>
+  </nav>
+
     <%= yield %>
-  </body>
+</body>
+
 </html>
