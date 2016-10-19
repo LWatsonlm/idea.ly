@@ -1,11 +1,10 @@
 <div class= "topic">
-  <%= post.topic %> <br />
   <% if post.topic == "Question" %>
-      <%= image_tag "/assets/question.png" %>
+      <%= image_tag "/assets/question-mark-2-512.png" %><br />
     <% elsif post.topic == "Idea" %>
-      <%= image_tag "/assets/Light-Bulb-logo.png" %>
+      <%= image_tag "/assets/Light-Bulb-logo.png" %><br />
     <% elsif post.topic == "Random Thought" %>
-      <%= image_tag "/assets/thought-bubble.png" %>
+      <%= image_tag "/assets/thought-bubble.png" %><br />
     <% else %>
   <% end %>
 </div>

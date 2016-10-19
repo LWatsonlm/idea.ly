@@ -1,3 +1,25 @@
 <h1>Ideas that need your input</h1>
 
-<%= render 'post' %>
+<% @posts.each do |post| %>
+
+<div class= "post-view">
+
+  <%= render partial: "topic", locals: {post: post} %> <br />
+  <h1> <%= link_to post.title, post_path(post) %> </h1> 
+
+  <strong> Submitted <%= time_ago_in_words(post.created_at) %> by <%= post.user.email %></strong>
+
+ <p>
+   <%= link_to like_post_path(post), method: :put do %>
+      <%= "👌🏽 Upvotes: #{post.get_upvotes.size}  " %>
+    <% end %>
+ </p>
+
+ <p>
+   <%= link_to dislike_post_path(post), method: :put do %>
+   <%= "💩  Downvotes: #{post.get_downvotes.size}"  %>
+   <% end %>
+ </p>
+</div>
+
+<% end %>

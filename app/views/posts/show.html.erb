@@ -1,21 +1,23 @@
-<h1>
-  Title: <%= @post.title %>
-</h1>
+<div class ="post-show">
 
-<%= render partial: "topic", locals: { post: @post } %>
+  <h1><%= @post.title %></h1>
+  <h5>Submitted <%= time_ago_in_words(@post.created_at) %> by <%= @post.user.email %></h5>
 
-<% if @post.user == current_user %>
-    <%= link_to 'Edit Post', edit_post_path(@post), class: "nav-link" %> |
-    <%= link_to 'Delete Post', post_path, method: :delete, class: "nav-link" %>
-<% end %>
+  <%= render partial: "topic", locals: { post: @post } %>
 
-<p>Text: <%= @post.body %></p>
+  <% if @post.user == current_user %>
+      <%= link_to 'Edit Post', edit_post_path(@post), class: "nav-link" %> |
+      <%= link_to 'Delete Post', post_path, method: :delete, class: "nav-link" %>
+  <% end %>
 
-<h2>Existing Comments:</h2>
-<%= render 'comment' %>
+  <p class="post-body"><%= @post.body %></p>
 
+  <h2>Existing Comments:</h2>
+  <%= render 'comment' %>
 
-<h2>Add a Comment:</h2>
-<%= render 'comments/form' %>
+  <h2>Add a Comment:</h2>
+  <%= render 'comments/form' %>
 
-<%= link_to 'Back to Dashboard', posts_path, class: "nav-link" %>
+  <%= link_to 'Back to Dashboard', posts_path, class: "nav-link" %>
+
+</div>

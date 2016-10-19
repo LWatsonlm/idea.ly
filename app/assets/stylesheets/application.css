@@ -23,9 +23,13 @@ nav a {
   padding: 1%;
 }
 
-a, h1, h2, h3, p {
+a, h1, h2, h3, h5, p {
     text-decoration: none;
     font-family: 'Roboto Slab', serif;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 
@@ -38,7 +42,14 @@ form {
   overflow: hidden;
   width: 38%;
   padding: 10px;
+  display: inline-block;
+  text-align: center;
 }
+
+.devise, .devise-links, #new_user {
+  text-align: center;
+}
+
 
 .field {
   border: 0;
@@ -65,10 +76,12 @@ img {
   height: auto;
 }
 
+post-body {
+  border-radius: 5px;
 
-a:hover {
-    text-decoration: underline;
 }
+
+
 
 
 .voting {
@@ -77,6 +90,7 @@ a:hover {
 
 .post-view {
   border: blue solid;
+  display: block;
 }
 
 .nav-link {
