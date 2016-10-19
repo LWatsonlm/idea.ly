@@ -13,17 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+/*"Roboto Slab", Helvetica, Arial, sans-serif;*/
+
+body {
+  background-color: #FABB00;
+}
+
+span {
+  color: #3B5998;
+}
+
 nav {
   padding: 1%;
-  border-bottom: 1px solid #888;
-  background-color: red;
+  border-bottom: 2px solid #888;
+  list-style: none;
+  background-color: #e9ebee;
+  border-top: 1px solid #ccc;
 }
 
 nav a {
-  padding: 1%;
+  padding: .5%;
+	text-decoration: none;
+  font-size: 23px;
 }
 
-a, h1, h2, h3, h5, p {
+a, h2, h3, h5, p {
     text-decoration: none;
     font-family: 'Roboto Slab', serif;
 }
@@ -78,14 +93,22 @@ img {
 
 post-body {
   border-radius: 5px;
-
 }
 
 .post-view {
-  border: blue solid;
-  margin: 2% 10% 2% 10%;
+  border: 2px solid #c6c7cc;
+  border-radius: 25px;
+  margin: 2% 23% 2% 23%;
+  background-color: #e9eBee;
+  padding: 3% 5% 3% 5%;
 }
 
 .nav-link {
   border: green dashed;
+}
+
+.tada {
+  text-align: center;
+  font-family: 'Chewy', cursive;
+  font-size: 30px;
 }
