@@ -41,7 +41,7 @@ nav a {
   font-size: 23px;
 }
 
-a, h2, h3, h5, p {
+a, h1, h2, h3, h5, p {
   text-decoration: none;
   font-family: 'Roboto Slab', serif;
 }
@@ -88,6 +88,11 @@ post-body {
   border-radius: 5px;
 }
 
+#post_body {
+  width: 70%;
+  height: auto;
+}
+
 .post-view {
   border: 2px solid #c6c7cc;
   border-radius: 25px;
@@ -112,8 +117,8 @@ post-body {
   width: 80%;
 }
 
-.tada {
+.tada h1 {
   text-align: center;
   font-family: 'Chewy', cursive;
-  font-size: 30px;
+  font-size: 60px;
 }

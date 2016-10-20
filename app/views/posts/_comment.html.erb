@@ -1,7 +1,7 @@
-<div class= "comments">
 <% @post.comments.each do |comment| %>
+<div class= "comments">
   <p><strong>Name: </strong><%= comment.title %></p>
   <p><strong>Body: </strong><%= comment.body %></p>
   <%= link_to 'delete comment', post_comment_path(@post, comment), method: :delete %>
-<% end %>
 </div>
+<% end %>
