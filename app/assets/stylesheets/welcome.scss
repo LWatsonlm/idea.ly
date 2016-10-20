@@ -19,24 +19,30 @@
 }
 
 .welcome-top {
+  color: #191919;
   font-family: 'Chewy', cursive;
   font-size: 130px;
   margin: 0;
+  text-shadow: 0 5px 0 rgba(255, 255, 255, 0.4);
 }
 
 .welcome-middle {
+  color: #191919;
   font-family: 'Chewy', cursive;
   font-size: 50px;
   margin: 0;
   text-align: center;
+  text-shadow: 0 5px 0 rgba(255, 255, 255, 0.4);
   width: 50%;
 }
 
 .welcome-bottom {
+  color: #191919;
   border: solid;
+  border-radius: 10px;
   font-family: 'Chewy', cursive;
   font-size: 30px;
-  margin: 10;
+  margin: 3%;
   padding: .5%;
 }
 
@@ -45,5 +51,5 @@
 }
 
 .welcome a:link {
-  color: #6f6e7c;
+  color: #191919;
 }

@@ -1,25 +1,24 @@
-<div class ="post-show">
-
-  <h1><%= @post.title %></h1>
-  <h5>Submitted <%= time_ago_in_words(@post.created_at) %> by <%= @post.user.email %></h5>
+<div class ="post-view">
 
   <%= render partial: "topic", locals: { post: @post } %>
 
+  <h1><%= @post.title %></h1>
+  <h5>Submitted <%= time_ago_in_words(@post.created_at) %> by <span><%= @post.user.email %></span></h5>
+
   <% if @post.user == current_user %>
-      <%= link_to 'Edit Post', edit_post_path(@post), class: "nav-link" %> |
-      <%= link_to 'Delete Post', post_path, method: :delete, class: "nav-link" %>
+      <%= link_to 'Edit Post', edit_post_path(@post) %> |
+      <%= link_to 'Delete Post', post_path, method: :delete %>
   <% end %>
 
-  <p class="post-body"><%= @post.body %></p>
+  <p><%= @post.body %></p>
 
   <%= render partial: "voting", locals: { post: @post } %>
+</div>
 
   <h2>Existing Comments:</h2>
   <%= render 'comment' %>
 
-  <h2>Add a Comment:</h2>
+<br />
+
   <%= render 'comments/form' %>
-
   <%= link_to 'Back to Dashboard', posts_path, class: "nav-link" %>
-
-</div>

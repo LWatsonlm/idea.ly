@@ -17,7 +17,9 @@
 /*"Roboto Slab", Helvetica, Arial, sans-serif;*/
 
 body {
-  background-color: #FABB00;
+  background-color: #FDBF00;
+  /*background-color: rgba(255, 192, 0, .7);*/
+  text-align: center;
 }
 
 span {
@@ -26,10 +28,11 @@ span {
 
 nav {
   padding: 1%;
-  border-bottom: 2px solid #888;
-  list-style: none;
   background-color: #e9ebee;
   border-top: 1px solid #ccc;
+  margin: 0% 5% 0% 5%;
+  border: 2px solid #c6c7cc;
+  border-radius: 25px;
 }
 
 nav a {
@@ -39,14 +42,13 @@ nav a {
 }
 
 a, h2, h3, h5, p {
-    text-decoration: none;
-    font-family: 'Roboto Slab', serif;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 /*need to style forms and image sizes*/
 
@@ -61,11 +63,6 @@ form {
   background-color: #FCFCFC;
 }
 
-.devise, .devise-links, #new_user {
-  text-align: center;
-}
-
-
 .field {
   border: 0;
   margin: 5px;
@@ -76,10 +73,6 @@ form {
   font: 15px/1.4 "Roboto Slab", Helvetica, Arial, sans-serif;
 }
 
-.actions {
-  text-align:center;
-}
-
 input {
   border-radius: 5px;
   font: 15px/1.4 "Roboto Slab", Helvetica, Arial, sans-serif;
@@ -87,7 +80,7 @@ input {
 }
 
 img {
-  width: 20%;
+  width: 30%;
   height: auto;
 }
 
@@ -100,11 +93,23 @@ post-body {
   border-radius: 25px;
   margin: 2% 23% 2% 23%;
   background-color: #e9eBee;
-  padding: 3% 5% 3% 5%;
+  padding: 1% 5% 1% 5%;
 }
 
-.nav-link {
-  border: green dashed;
+.voting a {
+  padding: 1%;
+}
+
+.voting a:hover {
+  color: #FDBF00;
+}
+
+#comment_title {
+  width: 40%;
+}
+
+#comment_body {
+  width: 80%;
 }
 
 .tada {

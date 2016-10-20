@@ -1,11 +1,9 @@
-<p>
+<div class = "voting">
   <%= link_to like_post_path(post), method: :put do %>
      <%= "👌🏽 Upvotes: #{post.get_upvotes.size}  " %>
    <% end %>
-</p>
 
-<p>
   <%= link_to dislike_post_path(post), method: :put do %>
   <%= "💩  Downvotes: #{post.get_downvotes.size}"  %>
   <% end %>
-</p>
+</div>
