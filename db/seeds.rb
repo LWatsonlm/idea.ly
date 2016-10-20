@@ -18,8 +18,8 @@ biking = Post.create!(title: "Bikers!! What would be helpful to you?", topic: "Q
 career = Post.create!(title: "Should I become a front end developer, or a back end developer?", user: eric, topic: "Question", body: "Thinking about switching careers but having a hard time. Can anyone give me feedback on either career path?")
 random = Post.create!(title: "OMG, you guys!", topic: "Random Thought", user: latoya, body: "Wrong is spelled wrong in the dictionary! #MindBlown!")
 
-Comment.create!(title: "Not a fan", body: "Ed, Edd, n Eddy? Nah, not a fan. Maybe try writing about something more relevant. Like Trump fanfiction... however, it would be super hard to know if it's real or not", post: writer)
-Comment.create!(title: "yum! I'm hungry!", body: "I LOVE FOOD. Honestly, I would try to think out of the box, something that hasn't been created yet. Pizza Sushi?, Chicken Cupcakes?", post: food)
-Comment.create!(title: "biker, here!", body: "Yeah, I love biking in D.C. It would be helpful to know which streets to avoid because there isn't any bike lanes", post: biking)
-Comment.create!(title: "Hmmm...", body: "It all depends on what you like to do. Try some courses on Code Academy or Treehouse and let us know what you liked.", post: career)
-Comment.create!(title: "Whooooa!!", body: "It sure is! haha!", post: random)
+Comment.create!(name: "Billy, I have 5 years of online blogging experience", body: "Ed, Edd, n Eddy? Nah, not a fan. Maybe try writing about something more relevant. Like Trump fanfiction... however, it would be super hard to know if it's real or not", post: writer)
+Comment.create!(name: "Gordon Ramsay, I have been awarded 16 Michelin stars in total", body: "I LOVE FOOD. Honestly, I would try to think out of the box, something that hasn't been created yet. Pizza Sushi?, Chicken Cupcakes?", post: food)
+Comment.create!(name: "Jane, Bikes DC all day, all night", body: "Yeah, I love biking in D.C. It would be helpful to know which streets to avoid because there isn't any bike lanes", post: biking)
+Comment.create!(name: "Brendan Eich, I dabble in Javascript here and there", body: "It all depends on what you like to do. Try some courses on Code Academy or Treehouse and let us know what you liked.", post: career)
+Comment.create!(name: "Jonah Peretti, lover of Buzzfeed", body: "It sure is! haha, cool if I write a buzzfeed article on this?", post: random)
