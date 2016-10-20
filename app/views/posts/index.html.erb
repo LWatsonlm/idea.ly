@@ -4,11 +4,10 @@
 
 <% @posts.each do |post| %>
 
-<div class= "post-view">
+  <div class= "post-view">
 
   <%= render partial: "topic", locals: {post: post} %> <br />
-    <h1> <%= link_to post.title, post_path(post) %> </h1>
-
+  <h1> <%= link_to post.title, post_path(post) %> </h1>
   <strong> Submitted <%= time_ago_in_words(post.created_at) %> by <span><%= post.user.email %></span></strong>
 
   <p class="post-body"><%= post.body %></p>
