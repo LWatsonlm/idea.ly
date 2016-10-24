@@ -18,7 +18,6 @@
 
 body {
   background-color: #FDBF00;
-  /*background-color: rgba(255, 192, 0, .7);*/
   text-align: center;
 }
 
@@ -49,8 +48,6 @@ a, h1, h2, h3, h5, p {
 a:hover {
   text-decoration: underline;
 }
-
-/*need to style forms and image sizes*/
 
 form {
   border: 2px solid #c6c7cc;
@@ -115,6 +112,14 @@ post-body {
 
 #comment_body {
   width: 80%;
+}
+
+.comments-onshowpage {
+  border: 2px solid #c6c7cc;
+  border-radius: 25px;
+  margin: 2% 26% 2% 26%;
+  background-color: #AFE0DD;
+  padding: 1% 5% 1% 5%;
 }
 
 .tada h1 {

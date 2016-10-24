@@ -1,5 +1,5 @@
 <% @post.comments.each do |comment| %>
-<div class= "comments">
+<div class= "comments-onshowpage">
   <p><strong>Name and Bio: </strong><%= comment.name %></p>
   <p><strong>Body: </strong><%= comment.body %></p>
   <%= link_to 'delete comment', post_comment_path(@post, comment), method: :delete %>
