@@ -1,24 +1,39 @@
-# README
+# Idea.ly: A Question, Idea, and Random Thoughts Platform with Answers and Comments Functionality
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Project 2 for General Assembly's Full-Time Web Development Course
 
-Things you may want to cover:
+***
 
-* Ruby version
+## Ruby Version and Key Gems
+Idea.ly is built with Rails 5.0.0 and uses Postgresql as the database for Active Record.
 
-* System dependencies
+### Key gems used includes:
+  Used for upvoting and downvoting:
+    [act_as_votable](https://rubygems.org/gems/acts_as_votable/versions/0.10.0)
+  Used for User Authentication:
+    [devise](https://rubygems.org/gems/devise/versions/4.2.0)
 
-* Configuration
+## Background Story
+If you're anything like me, you have random thoughts, questions and ideas constantly burning in your head. I often wonder, what would others think about this?
 
-* Database creation
+Idea.ly gives users the ability to post their ideas and receive feedback from other users.
 
-* Database initialization
+Users can also upvote or downvote any and all posts - but only once!
 
-* How to run the test suite
+## Technologies Used
+Idea.ly is a Full Stack, Ruby on Rails CRUD Application. Using a Postgresql database and Active Record, Idea.ly has three models which stores all users, posts and comments associated with that user.
 
-* Services (job queues, cache servers, search engines, etc.)
+## How to Run App
+Install Gems from Gemfile:
+```
+$ bundle install
+```
 
-* Deployment instructions
+Start The Server:
+```
+$ rails s
+```
 
-* ...
+## Screenshots of $ip
+![alt text](assets/images/ideal.ly-homepage.png "Idea.ly Homepage screenshot")
+![alt text](assets/images/upvote-downvote.png "Idea.ly screenshot")
