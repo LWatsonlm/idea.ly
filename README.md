@@ -35,5 +35,5 @@ $ rails s
 ```
 
 ## Screenshots of Idea.ly
-![alt text](images/ideal.ly-homepage.png "Idea.ly Homepage screenshot")
-![alt text](images/upvote-downvote.png "Idea.ly screenshot")
+![alt text](app/assets/images/ideal.ly-homepage.png "Idea.ly Homepage screenshot")
+![alt text](app/assets/images/upvote-downvote.png "Idea.ly screenshot")
