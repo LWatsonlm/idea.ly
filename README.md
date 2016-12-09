@@ -34,6 +34,6 @@ Start The Server:
 $ rails s
 ```
 
-## Screenshots of $ip
-![alt text](assets/images/ideal.ly-homepage.png "Idea.ly Homepage screenshot")
-![alt text](assets/images/upvote-downvote.png "Idea.ly screenshot")
+## Screenshots of Idea.ly
+![alt text](images/ideal.ly-homepage.png "Idea.ly Homepage screenshot")
+![alt text](images/upvote-downvote.png "Idea.ly screenshot")
