@@ -7,9 +7,11 @@
 ## Ruby Version and Key Gems
 Idea.ly is built with Rails 5.0.0 and uses Postgresql as the database for Active Record.
 
-### Key gems used includes:
+### Gems includes:
   Used for upvoting and downvoting:
     [act_as_votable](https://rubygems.org/gems/acts_as_votable/versions/0.10.0)
+
+
   Used for User Authentication:
     [devise](https://rubygems.org/gems/devise/versions/4.2.0)
 
