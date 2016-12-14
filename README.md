@@ -25,6 +25,10 @@ Users can also upvote or downvote any and all posts - but only once!
 ## Technologies Used
 Idea.ly is a Full Stack, Ruby on Rails CRUD Application. Using a Postgresql database and Active Record, Idea.ly has three models which stores all users, posts and comments associated with that user.
 
+* Ruby on Rails
+* Postgresql database
+* Active Record
+
 ## How to Run App
 Install Gems from Gemfile:
 ```
