@@ -1,6 +1,14 @@
 # Idea.ly: A Question, Idea, and Random Thoughts Platform with Answers and Comments Functionality
 
-### Project 2 for General Assembly's Full-Time Web Development Course
+Project 2 for General Assembly's Full-Time Web Development Course
+
+For this project, the requirements were:
+* to be built in Rails.
+* have at least 2 models.
+* have complete RESTful routes for at least one of your resources with GET, POST, PUT, and DELETE.
+* have error handling & validations for all resources.
+* utilize an ORM to create a database table structure (e.g. ActiveRecord) and interact with your relationally-stored data.
+* have semantically-clean HTML and CSS that passes the standard validators.
 
 ***
 
@@ -23,11 +31,8 @@ Idea.ly gives users the ability to post their ideas and receive feedback from ot
 Users can also upvote or downvote any and all posts - but only once!
 
 ## Technologies Used
-Idea.ly is a Full Stack, Ruby on Rails CRUD Application. Using a Postgresql database and Active Record, Idea.ly has three models which stores all users, posts and comments associated with that user.
+Idea.ly is a Full Stack, Ruby on Rails CRUD Application. Using a Postgresql database and Active Record ORM, Idea.ly has three models which stores all users, posts and comments associated with that user.
 
-* Ruby on Rails
-* Postgresql database
-* Active Record
 
 ## How to Run App
 Install Gems from Gemfile:
